@@ -22,10 +22,17 @@ public class Snake {
 			snakeX[d] = snakeX[d-1];
 			snakeY[d] = snakeY[d-1];
 		}
-// The direction of movement of our snake depends on the arrow		
+// the direction of movement of our snake depends on the arrow		
 		if (direction == 0) snakeY[0]--;
 		if (direction == 1) snakeX[0]++;
 		if (direction == 2) snakeY[0]++;
 		if (direction == 3) snakeX[0]--;
+		// the snake eats itself
+		for(int d = length; d > 0; d--) {
+			if((snakeX[0] == snakeX[d]) & (snakeY[0] == snakeY[d])) length = d;
+		}
+// minimum snake size
+		if(length < 2) length = 2;
 	}
+
 }
