@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class SnakeGame extends JPanel{
 	
 	public static final int SCALE = 32;
